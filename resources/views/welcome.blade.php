@@ -23,7 +23,7 @@
                     <li class="nav-item active">
                         <router-link to="/sell"><a class="nav-link">Home</a></router-link>
 
-                   
+
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

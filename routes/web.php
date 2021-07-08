@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\CatagoryController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,18 @@ use App\Http\Controllers\CatagoryController;
 |
 */
 
-Route::get('/{any?}', function () {
-    return view('welcome');
-});
-Route::get('/catagory', [CatagoryController::class, 'store'])->name('catagory');
- Route::get('/catagory/{catagor}/edit',[CatagoryController::class, 'edit']);
+// Route::get('/', function () {
+//     return view('');
+// });
+Route::get('/home', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/Sell', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
+Route::get('/stock', [HomeController::class, 'index']);
+Route::get('/coustomer', [HomeController::class, 'index']);
+
+
 Auth::routes();
 
+//Admin
+Route::get('/Admin/home', [HomeController::class, 'index']);
